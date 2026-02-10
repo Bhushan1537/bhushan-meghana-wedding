@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bhushan V Reddy & Meghana S — Wedding Invitation</title>
+
+<base href="./" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#07070a;
+  --txt: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.74);
+  --accent:#ffd7a8;
+  --accent2:#ffb3c7;
+  --shadow:0 18px 60px rgba(0,0,0,.45);
+  --radius:22px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--txt);
+  font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+section{padding:90px 0}
+.container{width:min(980px,92vw);margin:0 auto}
+
+.hero{
+  position:relative;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.04);
+  min-height:78vh;
+  display:flex;
+  align-items:flex-end;
+}
+
+.bg{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+  transform:translateY(0);
+  filter:contrast(1.12) saturate(1.12) brightness(1.04);
+  image-rendering:-webkit-optimize-contrast;
+  backface-visibility:hidden;
+}
+
+.tint{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.72));
+}
+
+.content{
+  position:relative;
+  padding:30px 26px 26px;
+  width:100%;
+}
+
+.kicker{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  font-size:13px;
+  color:rgba(255,255,255,.82);
+}
+
+h1,h2{
+  margin:14px 0 8px;
+  font-family:"Playfair Display",serif;
+  line-height:1.05;
+}
+h1{font-size:clamp(34px,5vw,54px)}
+h2{font-size:clamp(28px,4vw,42px)}
+
+p{margin:10px 0 0;color:var(--muted);line-height:1.65;font-size:16px}
+
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+
+.btn{
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn.primary{
+  background:linear-gradient(135deg,rgba(255,215,168,.28),rgba(255,179,199,.26));
+}
+
+.reveal{opacity:0;transform:translateY(18px);filter:blur(4px)}
+.reveal.show{
+  opacity:1;transform:translateY(0);filter:blur(0);
+  transition:.9s ease;
+}
+
+/* FAMILY GRID */
+.familyGrid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin-top:16px;
+}
+@media(min-width:860px){
+  .familyGrid{grid-template-columns:1fr 1fr}
+}
+.familyCard{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  min-height:320px;
+}
+.familyCard .bg2{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center;
+}
+.familyCard .tint2{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.80));
+}
+.familyCard .info{
+  position:absolute;bottom:0;
+  padding:16px;
+}
+.familyCard h3{
+  margin:0 0 6px;
+  font-family:"Playfair Display",serif;
+  font-size:24px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:rgba(255,255,255,.65);
+}
+</style>
+</head>
+
+<body id="top">
+<div class="container">
+
+<!-- SLIDE 1 — OUR SON -->
+<section>
+  <div class="hero">
+    <div class="bg" style="background-image:url('assets/bhushan.jpeg')"></div>
+    <div class="tint"></div>
+    <div class="content">
+      <div class="kicker reveal">Our Son</div>
+      <h1 class="reveal">Bhushan V Reddy</h1>
+      <p class="reveal">With joy in our hearts, we invite you to celebrate a beautiful beginning.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2 — OUR DAUGHTER -->
+<section>
+  <div class="hero">
+    <div class="bg" style="background-image:url('assets/meghana.jpeg')"></div>
+    <div class="tint"></div>
+    <div class="content">
+      <div class="kicker reveal">Our Daughter</div>
+      <h1 class="reveal">Meghana S</h1>
+      <p class="reveal">Two families, one celebration — and a lifetime of togetherness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3 — SAVE THE DATE -->
+<section>
+  <div class="hero">
+    <div class="bg" style="background-image:url('assets/couple.jpeg')"></div>
+    <div class="tint"></div>
+    <div class="content">
+      <div class="kicker reveal">Save the Date</div>
+      <h2 class="reveal">Are getting married</h2>
+      <p class="reveal">The wedding bells will ring on <b>8th March 2026</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 4 — MEET OUR FAMILY -->
+<section>
+  <div class="hero">
+    <div class="bg" style="background-image:url('assets/couple.jpeg')"></div>
+    <div class="tint"></div>
+    <div class="content">
+      <div class="kicker reveal">Meet our Family</div>
+
+      <div class="familyGrid reveal">
+        <div class="familyCard">
+          <div class="bg2" style="background-image:url('assets/bhushan-family.jpeg')"></div>
+          <div class="tint2"></div>
+          <div class="info">
+            <h3>Our Family</h3>
+            <p>Venu Kumar L & Kusuma N<br>along with our son <b>Bhushan V Reddy</b></p>
+          </div>
+        </div>
+
+        <div class="familyCard">
+          <div class="bg2" style="background-image:url('assets/meghana-family.jpeg')"></div>
+          <div class="tint2"></div>
+          <div class="info">
+            <h3>Their Family</h3>
+            <p>Satish Reddy & Manjula<br>
+               son <b>Suhas Reddy</b> & daughter <b>Meghana S</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 5 — WHEN & WHERE -->
+<section>
+  <div class="hero">
+    <div class="bg" style="background-image:url('assets/muhurtham.jpeg')"></div>
+    <div class="tint"></div>
+    <div class="content">
+      <div class="kicker reveal">When & Where</div>
+      <h2 class="reveal">The Royal Grand Palace</h2>
+      <p class="reveal">
+        Gate, Sarjapur - Marathahalli Rd,<br>
+        behind HP petrol bunk, Sompura,<br>
+        Bengaluru, Karnataka 562125
+      </p>
+      <p class="reveal">
+        <b>Reception:</b> 07.03.2026 — 6:00 PM onwards<br>
+        <b>Muhurtham:</b> 08.03.2026 — 10:30 AM to 11:30 AM
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6 — COUNTDOWN -->
+<section>
+  <div class="hero">
+    <div class="bg" style="background-image:url('assets/countdownbegins.jpeg')"></div>
+    <div class="tint"></div>
+    <div class="content">
+      <div class="kicker reveal">Countdown Begins</div>
+      <h2 class="reveal">Countdown to the Special Day</h2>
+
+      <div class="row reveal">
+        <div><b id="d">--</b> Days</div>
+        <div><b id="h">--</b> Hours</div>
+        <div><b id="m">--</b> Minutes</div>
+        <div><b id="s">--</b> Seconds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+Concept and Creation by <b>Bhushan</b> with Love
+</footer>
+
+</div>
+
+<script>
+/* reveal */
+const io=new IntersectionObserver(e=>{
+  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"))
+},{threshold:.14});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* parallax translate ONLY */
+const bgs=document.querySelectorAll(".bg");
+addEventListener("scroll",()=>{
+  bgs.forEach(bg=>{
+    const r=bg.parentElement.getBoundingClientRect();
+    bg.style.transform=`translateY(${r.top*-0.05}px)`;
+  });
+},{passive:true});
+
+/* countdown */
+const target=new Date("2026-03-08T10:30:00+05:30").getTime();
+setInterval(()=>{
+  let d=target-Date.now();
+  d=Math.max(0,d);
+  const days=Math.floor(d/86400000);d%=86400000;
+  const h=Math.floor(d/3600000);d%=3600000;
+  const m=Math.floor(d/60000);d%=60000;
+  const s=Math.floor(d/1000);
+  document.getElementById("d").textContent=days;
+  document.getElementById("h").textContent=String(h).padStart(2,"0");
+  document.getElementById("m").textContent=String(m).padStart(2,"0");
+  document.getElementById("s").textContent=String(s).padStart(2,"0");
+},1000);
+</script>
+
+</body>
+</html>
