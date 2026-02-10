@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhushan & Meghana — Wedding Invitation</title>
+
+<base href="./">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#07070a;
+  --txt:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.74);
+  --accent:#ffd7a8;
+  --accent2:#ffb3c7;
+  --radius:22px;
+  --shadow:0 18px 60px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--txt);
+  font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(980px,92vw);margin:0 auto}
+
+/* ===== TOP BAR (SMALL & CLEAN) ===== */
+.nav{position:fixed;top:10px;left:0;right:0;z-index:50;pointer-events:none}
+.nav .bar{
+  pointer-events:auto;
+  margin:0 auto;
+  width:min(980px,92vw);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:6px 10px;
+  background:rgba(10,10,14,.55);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  border-radius:999px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.brand{
+  display:flex;align-items:center;gap:8px;
+  font-family:"Playfair Display",serif;
+  font-weight:700;font-size:14px;
+}
+.dot{
+  width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+.navRight{display:flex;gap:8px;align-items:center;position:relative}
+.chip{
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  font-size:12px;
+}
+.chip.primary{
+  background:linear-gradient(135deg,rgba(255,215,168,.26),rgba(255,179,199,.22));
+}
+
+/* Menu */
+.menuBtn{
+  padding:7px 10px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  font-size:12px;cursor:pointer;color:white;
+}
+.menuPanel{
+  position:absolute;top:42px;right:0;
+  width:190px;padding:8px;
+  border-radius:16px;
+  background:rgba(10,10,14,.75);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(14px);
+  display:none;
+}
+.menuPanel.show{display:block}
+.menuPanel a{
+  display:block;padding:10px;border-radius:12px;font-size:13px;
+}
+.menuPanel a:hover{background:rgba(255,255,255,.08)}
+
+/* ===== SECTIONS ===== */
+section{padding:92px 0 70px}
+.hero{
+  position:relative;
+  min-height:78vh;
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:flex-end;
+}
+.bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+}
+.tint{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.8));
+}
+.content{position:relative;padding:28px}
+.kicker{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  font-size:13px;
+}
+h1,h2{
+  margin:14px 0 8px;
+  font-family:"Playfair Display",serif;
+  line-height:1.1;
+}
+h1{font-size:clamp(34px,5vw,54px)}
+h2{font-size:clamp(28px,4.2vw,42px)}
+p{color:var(--muted);line-height:1.65}
+
+/* Buttons */
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.btn{
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+  font-weight:600;
+}
+.btn.primary{
+  background:linear-gradient(135deg,rgba(255,215,168,.28),rgba(255,179,199,.26));
+}
+
+/* Family */
+/* ===== FAMILY SLIDE FIX ===== */
+.familyGrid{
+  display:grid;
+  gap:18px;
+  margin-top:18px;
+}
+
+@media(min-width:860px){
+  .familyGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.familyCard{
+  position:relative;
+  aspect-ratio: 3 / 4;              /* KEY FIX: consistent photo size */
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+}
+
+.familyCard .bg2{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center top;   /* faces stay visible */
+  transform: scale(1.03);
+}
+
+.familyCard .tint2{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05) 0%,
+      rgba(0,0,0,.35) 55%,
+      rgba(0,0,0,.85) 100%
+    );
+}
+
+.familyCard .info{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:18px 16px 20px;
+  text-align:left;
+}
+
+.familyCard h2{
+  margin:0 0 6px;
+  font-size:22px;
+  font-family:"Playfair Display",serif;
+}
+
+.familyCard p{
+  margin:0;
+  font-size:14px;
+  line-height:1.55;
+  color:rgba(255,255,255,.85);
+}
+
+
+
+/* Countdown */
+.countGrid{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.tile{
+  padding:14px 16px;border-radius:18px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);
+  text-align:center;min-width:92px;
+}
+.num{font-size:24px;font-weight:700}
+.lab{font-size:12px;color:rgba(255,255,255,.72)}
+
+footer{text-align:center;padding:40px 0;color:rgba(255,255,255,.65)}
+</style>
+</head>
+
+<body id="top">
+
+<!-- TOP BAR -->
+<div class="nav">
+  <div class="bar">
+    <div class="brand"><span class="dot"></span> Bhushan &amp; Meghana</div>
+    <div class="navRight">
+      <a class="chip primary" href="#whenwhere">Go to Venue</a>
+      <button class="menuBtn" id="menuBtn">☰</button>
+      <div class="menuPanel" id="menuPanel">
+        <a href="#son">Our Son</a>
+        <a href="#daughter">Our Daughter</a>
+        <a href="#save">Save the Date</a>
+        <a href="#family">Meet our Family</a>
+        <a href="#whenwhere">When & Where</a>
+        <a href="#countdown">Countdown</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- SLIDE 1 -->
+<section id="son">
+<div class="hero">
+<div class="bg" style="background-image:url('assets/bhushan.jpeg')"></div>
+<div class="tint"></div>
+<div class="content">
+<div class="kicker">Our Son</div>
+<h1>Bhushan V Reddy</h1>
+<p>With joy in our hearts, we invite you to celebrate a beautiful beginning.</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 2 -->
+<section id="daughter">
+<div class="hero">
+<div class="bg" style="background-image:url('assets/meghana.jpeg')"></div>
+<div class="tint"></div>
+<div class="content">
+<div class="kicker">Our Daughter</div>
+<h1>Meghana S</h1>
+<p>Two families, one celebration.</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 3 -->
+<section id="save">
+<div class="hero">
+<div class="bg" style="background-image:url('assets/couple.jpeg')"></div>
+<div class="tint"></div>
+<div class="content">
+<div class="kicker">Save the Date</div>
+<h2>Are getting married</h2>
+<p>The wedding bells will ring on <b>8th March 2026</b>.</p>
+<div class="row">
+<a class="btn primary" href="#whenwhere">Go to Venue</a>
+<a class="btn" href="#countdown">See Countdown</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 4 -->
+<section id="family">
+<div class="hero">
+<div class="bg" style="background-image:url('assets/couple.jpeg')"></div>
+<div class="tint"></div>
+<div class="content">
+<div class="kicker">Meet our Family</div>
+
+<div class="familyGrid">
+  <div class="familyCard">
+    <div class="bg2" style="background-image:url('assets/bhushan-family.jpeg')"></div>
+    <div class="tint2"></div>
+    <div class="info">
+      <h2>Our Family</h2>
+      <p>Venu Kumar L & Kusuma N<br>with Bhushan V Reddy</p>
+    </div>
+  </div>
+
+  <div class="familyCard">
+    <div class="bg2" style="background-image:url('assets/meghana-family.jpeg')"></div>
+    <div class="tint2"></div>
+    <div class="info">
+      <h2>Their Family</h2>
+      <p>Satish Reddy & Manjula<br>with Suhas Reddy & Meghana S</p>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+</div>
+</section>
+
+<!-- SLIDE 5 -->
+<section id="whenwhere">
+<div class="hero">
+<div class="bg" style="background-image:url('assets/muhurtham.jpeg')"></div>
+<div class="tint"></div>
+<div class="content">
+<div class="kicker">When & Where</div>
+<h2>The Royal Grand Palace</h2>
+<p>Gate, Sarjapur - Marathahalli Rd,<br>Behind HP Petrol Bunk, Sompura, Bengaluru</p>
+<div class="row">
+<a class="btn primary" target="_blank"
+href="https://www.google.com/maps?q=Gate,+Sarjapur+-+Marathahalli+Rd,+behind+HP+petrol+bunk,+Sompura,+Bengaluru,+Karnataka+562125">
+Open in Google Maps
+</a>
+</div>
+<p style="margin-top:14px">
+<b>Reception:</b> 07.03.2026 – 6:00 PM onwards<br>
+<b>Muhurtham:</b> 08.03.2026 – 10:30 to 11:30 AM
+</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 6 -->
+<section id="countdown">
+<div class="hero">
+<div class="bg" style="background-image:url('assets/countdownbegins.jpeg')"></div>
+<div class="tint"></div>
+<div class="content">
+<div class="kicker">Countdown Begins</div>
+<h2>Countdown to the Special Day</h2>
+
+<div class="countGrid">
+<div class="tile"><span id="d" class="num">--</span><div class="lab">Days</div></div>
+<div class="tile"><span id="h" class="num">--</span><div class="lab">Hours</div></div>
+<div class="tile"><span id="m" class="num">--</span><div class="lab">Minutes</div></div>
+<div class="tile"><span id="s" class="num">--</span><div class="lab">Seconds</div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>Concept and Creation by <b>Bhushan</b> with Love</footer>
+</div>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const menuPanel=document.getElementById("menuPanel");
+menuBtn.onclick=e=>{e.stopPropagation();menuPanel.classList.toggle("show")};
+document.onclick=()=>menuPanel.classList.remove("show");
+
+/* Countdown IST */
+const target=new Date("2026-03-08T10:30:00+05:30").getTime();
+function tick(){
+let d=target-Date.now();if(d<0)d=0;
+const days=Math.floor(d/86400000);d%=86400000;
+const h=Math.floor(d/3600000);d%=3600000;
+const m=Math.floor(d/60000);d%=60000;
+const s=Math.floor(d/1000);
+document.getElementById("d").textContent=days;
+document.getElementById("h").textContent=String(h).padStart(2,"0");
+document.getElementById("m").textContent=String(m).padStart(2,"0");
+document.getElementById("s").textContent=String(s).padStart(2,"0");
+}
+tick();setInterval(tick,1000);
+</script>
+
+</body>
+</html>
