@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bhushan V Reddy & Meghana S – Wedding Invitation</title>
+
+<style>
+:root{
+  --bg:#050507;
+  --txt:#ffffff;
+  --muted:rgba(255,255,255,.75);
+  --gold:#f3d28b;
+  --glass:rgba(255,255,255,.12);
+  --border:rgba(255,255,255,.18);
+  --radius:28px;
+  --shadow:0 24px 60px rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--txt);
+  overflow-x:hidden;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:90px 18px 50px;
+  position:relative;
+}
+
+/* === BACKGROUND (SHARP VERSION) === */
+.bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.02);              /* minimal zoom */
+  filter:contrast(1.12) saturate(1.08);
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.60)
+  );
+}
+
+.card{
+  width:min(960px,100%);
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:34px 26px;
+  text-align:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(0,0,0,.35);
+  border:1px solid var(--border);
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 6px rgba(243,210,139,.25);
+}
+
+h1{
+  font-size:clamp(30px,4.5vw,48px);
+  margin:0 0 10px;
+}
+
+.sub{
+  font-size:clamp(15px,2.2vw,18px);
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 22px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--gold),#fff1c6);
+  color:#000;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.grid{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:14px;
+}
+
+.box{
+  grid-column:span 6;
+  background:rgba(0,0,0,.35);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:16px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+@media(max-width:700px){
+  .box{grid-column:span 12}
+}
+
+/* COUNTDOWN */
+.count{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-top:22px;
+  flex-wrap:wrap;
+}
+
+.time{
+  min-width:90px;
+  padding:14px;
+  border-radius:18px;
+  background:rgba(0,0,0,.4);
+  border:1px solid var(--border);
+}
+
+.time strong{
+  font-size:26px;
+  display:block;
+}
+
+footer{
+  text-align:center;
+  padding:30px 18px 50px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1. OUR SON -->
+<section>
+  <div class="bg" style="background-image:url('assets/bhushan.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="card">
+    <div class="badge"><span class="dot"></span> Our Son</div>
+    <h1>Bhushan V Reddy</h1>
+    <p class="sub">With the blessings of family and loved ones</p>
+  </div>
+</section>
+
+<!-- 2. OUR DAUGHTER -->
+<section>
+  <div class="bg" style="background-image:url('assets/meghana.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="card">
+    <div class="badge"><span class="dot"></span> Our Daughter</div>
+    <h1>Meghana S</h1>
+    <p class="sub">Grace, love and warmth personified</p>
+  </div>
+</section>
+
+<!-- 3. SAVE THE DATE -->
+<section>
+  <div class="bg" style="background-image:url('assets/couple.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="card">
+    <div class="badge"><span class="dot"></span> Save the Date</div>
+    <h1>8th March 2026</h1>
+    <p class="sub">As two hearts begin a lifetime together</p>
+  </div>
+</section>
+
+<!-- 4. MEET OUR FAMILY -->
+<section>
+  <div class="bg" style="background-image:url('assets/bhushan-family.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="card">
+    <div class="badge"><span class="dot"></span> Meet our Family</div>
+
+    <div class="grid">
+      <div class="box">
+        <strong>Our Family</strong><br><br>
+        Venu Kumar L & Kusuma N<br>
+        along with our son<br>
+        <strong>Bhushan V Reddy</strong>
+      </div>
+
+      <div class="box">
+        <strong>Their Family</strong><br><br>
+        Satish Reddy & Manjula<br>
+        along with their son Suhas Reddy<br>
+        and daughter <strong>Meghana S</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHEN & WHERE -->
+<section>
+  <div class="bg" style="background-image:url('assets/muhurtham.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="card">
+    <div class="badge"><span class="dot"></span> When & Where</div>
+    <h1>The Royal Grand Palace</h1>
+    <p class="sub">
+      Gate, Sarjapur – Marathahalli Rd,<br>
+      Behind HP Petrol Bunk,<br>
+      Sompura, Bengaluru – 562125
+    </p>
+
+    <div class="grid">
+      <div class="box">
+        <strong>Reception</strong><br><br>
+        07.03.2026 (Saturday)<br>
+        6:00 PM onwards
+      </div>
+      <div class="box">
+        <strong>Muhurtham</strong><br><br>
+        08.03.2026 (Sunday)<br>
+        10:30 AM – 11:30 AM
+      </div>
+    </div>
+
+    <a class="btn" target="_blank"
+       href="https://www.google.com/maps/search/?api=1&query=The+Royal+Grand+Palace+Sompura">
+       Open in Google Maps
+    </a>
+  </div>
+</section>
+
+<!-- 6. COUNTDOWN -->
+<section>
+  <div class="bg" style="background-image:url('assets/countdownbegins.jpeg')"></div>
+  <div class="overlay"></div>
+  <div class="card">
+    <div class="badge"><span class="dot"></span> Countdown Begins</div>
+    <h1>The Special Day Awaits</h1>
+
+    <div class="count">
+      <div class="time"><strong id="d">0</strong>Days</div>
+      <div class="time"><strong id="h">00</strong>Hours</div>
+      <div class="time"><strong id="m">00</strong>Minutes</div>
+      <div class="time"><strong id="s">00</strong>Seconds</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Concept and Creation by <strong>Bhushan</strong>
+</footer>
+
+<script>
+const target = Date.UTC(2026,2,8,5,0,0); // 8 Mar 2026 10:30 IST
+function tick(){
+  let diff = Math.max(0, Math.floor((target - Date.now())/1000));
+  d.textContent = Math.floor(diff/86400);
+  h.textContent = String(Math.floor(diff%86400/3600)).padStart(2,'0');
+  m.textContent = String(Math.floor(diff%3600/60)).padStart(2,'0');
+  s.textContent = String(diff%60).padStart(2,'0');
+}
+tick(); setInterval(tick,1000);
+</script>
+
+</body>
+</html>
